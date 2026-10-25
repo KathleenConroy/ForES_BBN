@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network6" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Stems">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="DBH">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Height">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Quality">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Height DBH Stems</parents>
+			<probabilities>1 0 0 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.6 0.3 0.1 0.6 0.3 0.1 0.7 0.2 0.1 0.5 0.4 0.1 0.6 0.3 0.1 0.3 0.5 0.2 0.2 0.5 0.3 0.1 0.5 0.4 0.3 0.4 0.3 0.1 0.5 0.4 0.2 0.5 0.3 0.1 0.2 0.7 0.1 0.3 0.6 0.1 0.1 0.8 0 0.5 0.5 0.1 0.4 0.5 0 0.3 0.7 0 0.3 0.7 0 0.1 0.9 0 0 1 0 0.3 0.7 0 0.1 0.9 0 0 1</probabilities>
+		</cpt>
+		<cpt id="Conifer_Broadleaf">
+			<state id="Broadleaf" />
+			<state id="Conifer" />
+			<state id="Mix" />
+			<probabilities>0.3333333 0.3333333 0.3333333</probabilities>
+		</cpt>
+		<cpt id="Age_of_stand">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.3333333 0.3333333 0.3333333</probabilities>
+		</cpt>
+		<cpt id="Prescription">
+			<state id="Thin_ClearFell" />
+			<state id="Extended_Rotation" />
+			<state id="CCF" />
+			<state id="No_Thin_ClearFell" />
+			<probabilities>0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="StandingVolume">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<state id="NA" />
+			<parents>Conifer_Broadleaf Prescription Quality Age_of_stand</parents>
+			<probabilities>0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.8 0.2 0 0 0.4 0.3 0.3 0 0.3 0.5 0.2 0 0.5 0.4 0.1 0 0.3 0.5 0.2 0 0.2 0.4 0.4 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.6 0.3 0.1 0 0.2 0.5 0.3 0 0.2 0.5 0.3 0 0.1 0.5 0.4 0 0.1 0.5 0.4 0 0.1 0.4 0.5 0 0 0 0 1 0 0 0 1 0 0 0 1 0.9 0.1 0 0 0.5 0.4 0.1 0 0.3 0.4 0.3 0 0.3 0.4 0.3 0 0.2 0.5 0.3 0 0.1 0.6 0.3 0 0 0 0 1 0 0 0 1 0 0 0 1 0.8 0.2 0 0 0.4 0.3 0.3 0 0.3 0.5 0.2 0 0.5 0.4 0.1 0 0.3 0.5 0.2 0 0.2 0.4 0.4 0 0.6 0.2 0.2 0 0.2 0.5 0.3 0 0.2 0.5 0.3 0 0.6 0.2 0.2 0 0.2 0.5 0.3 0 0.2 0.5 0.3 0 0.7 0.2 0.1 0 0.2 0.4 0.4 0 0.2 0.5 0.3 0 0.8 0.2 0 0 0.7 0.2 0.1 0 0.6 0.3 0.1 0 0.6 0.2 0.2 0 0.3 0.5 0.2 0 0.2 0.2 0.6 0 0.6 0.3 0.1 0 0.2 0.5 0.3 0 0.1 0.2 0.7 0 0 0 0 1 0 0 0 1 0 0 0 1 0.9 0.1 0 0 0.5 0.4 0.1 0 0.3 0.4 0.3 0 0.3 0.4 0.3 0 0.2 0.5 0.3 0 0.1 0.6 0.3 0 0 0 0 1 0 0 0 1 0 0 0 1 0.8 0.2 0 0 0.4 0.3 0.3 0 0.3 0.5 0.2 0 0.5 0.4 0.1 0 0.3 0.5 0.2 0 0.2 0.4 0.4 0 0.6 0.2 0.2 0 0.2 0.5 0.3 0 0.2 0.5 0.3 0 0.6 0.2 0.2 0 0.2 0.5 0.3 0 0.2 0.5 0.3 0 0.7 0.2 0.1 0 0.2 0.4 0.4 0 0.2 0.5 0.3 0</probabilities>
+		</cpt>
+		<cpt id="Peatland">
+			<state id="Poor" />
+			<state id="Average" />
+			<state id="Good" />
+			<state id="NA" />
+			<probabilities>0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="Carbon_Sink">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Peatland StandingVolume</parents>
+			<probabilities>0.8 0.1 0.1 0.7 0.2 0.1 0.6 0.2 0.2 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.7 0.2 0.1 0.4 0.3 0.3 0.3 0.3 0.4 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.6 0.2 0.2 0.3 0.3 0.4 0.2 0.3 0.5 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.7 0.2 0.1 0.4 0.3 0.3 0.3 0.3 0.4 0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Standing_dead_wood">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Prescription</parents>
+			<probabilities>0.4 0.4 0.2 0.5 0.4 0.1 0.3 0.5 0.2 0.1 0.3 0.6</probabilities>
+		</cpt>
+		<cpt id="Brash_FallenDeadwood">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Prescription</parents>
+			<probabilities>0.1 0.2 0.7 0.1 0.3 0.6 0.1 0.3 0.6 0.6 0.3 0.1</probabilities>
+		</cpt>
+		<cpt id="CarbonEmissions">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Peatland Standing_dead_wood Brash_FallenDeadwood</parents>
+			<probabilities>0.2 0.3 0.5 0.3 0.3 0.4 0.2 0.4 0.4 0.1 0.4 0.5 0.2 0.4 0.4 0.2 0.3 0.5 0.3 0.4 0.3 0.2 0.5 0.3 0.1 0.5 0.4 0.1 0.4 0.5 0.1 0.5 0.4 0.2 0.4 0.4 0.3 0.4 0.3 0.2 0.7 0.1 0.1 0.5 0.4 0.4 0.4 0.2 0.5 0.4 0.1 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.5 0.2 0.4 0.4 0.2 0.3 0.3 0.4 0.3 0.4 0.3 0.3 0.4 0.3 0.2 0.4 0.4 0.3 0.4 0.3 0.3 0.4 0.3 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Carbon_Carbon">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Carbon_Sink CarbonEmissions</parents>
+			<probabilities>0.9 0.1 0 0.7 0.2 0.1 0.6 0.3 0.1 0.5 0.4 0.1 0.4 0.5 0.1 0.3 0.3 0.4 0.2 0.6 0.2 0.1 0.5 0.4 0.1 0.4 0.5</probabilities>
+		</cpt>
+		<cpt id="Total_DeadWood">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Standing_dead_wood Brash_FallenDeadwood</parents>
+			<probabilities>0.9 0.1 0 0.3 0.6 0.1 0.2 0.6 0.2 0.3 0.6 0.1 0.1 0.8 0.1 0.1 0.4 0.5 0.1 0.4 0.5 0 0.3 0.7 0 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Carbon_Store">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Peatland Total_DeadWood Carbon_Carbon</parents>
+			<probabilities>0.8 0.2 0 0.7 0.2 0.1 0.6 0.2 0.2 0.7 0.2 0.1 0.2 0.5 0.3 0.2 0.4 0.4 0.6 0.2 0.2 0.5 0.3 0.2 0.3 0.4 0.3 0.7 0.2 0.1 0.2 0.5 0.3 0.2 0.4 0.4 0.6 0.2 0.2 0.5 0.3 0.2 0.3 0.4 0.3 0.3 0.3 0.4 0.2 0.4 0.4 0.2 0.5 0.3 0.7 0.2 0.1 0.6 0.3 0.1 0.5 0.4 0.1 0.4 0.5 0.1 0.3 0.6 0.1 0.4 0.5 0.1 0.4 0.5 0.1 0.3 0.6 0.1 0.4 0.5 0.1 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Evap">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>StandingVolume</parents>
+			<probabilities>0.7000000000000001 0.2000000000000001 0.1 0.6 0.2 0.2 0.5 0.4 0.1 0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="ForClimate">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Carbon_Store Evap</parents>
+			<probabilities>0.7 0.2 0.1 0.5 0.4 0.1 0.3 0.4 0.3 0.4 0.5 0.1 0.2 0.7 0.1 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.6 0.2 0.1 0.3 0.6</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.1.4109.0 ACADEMIC" name="For Climate">
+			<node id="Stems">
+				<name>Stems per HA</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>220 553 346 635</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="DBH">
+				<name>DBH</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>35 570 161 652</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Height">
+				<name>Height</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>31 486 157 568</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Quality">
+				<name>Forest Parameters (Standing Volume and Basal Area)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>229 467 355 549</position>
+				<barchart active="true" width="152" height="72" />
+			</node>
+			<node id="Conifer_Broadleaf">
+				<name>Species-General</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>27 322 153 404</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Age_of_stand">
+				<name>Age of stand</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>29 404 155 486</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Prescription">
+				<name>Forest Prescription</name>
+				<interior color="cc99ff" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 33 415 115</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="StandingVolume">
+				<name>Standing Volume</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>236 368 362 450</position>
+				<barchart active="true" width="152" height="90" />
+			</node>
+			<node id="Peatland">
+				<name>Peatland Quality</name>
+				<interior color="ccffcc" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>28 234 154 316</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="Carbon_Sink">
+				<name>Carbon_Sink</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>471 361 597 443</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Carbon_Carbon">
+				<name>Net Carbon Change</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>931 435 1057 517</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Standing_dead_wood">
+				<name>Standing dead wood</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>725 152 851 234</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Brash_FallenDeadwood">
+				<name>Brash_FallenDeadwood</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>574 211 700 293</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Total_DeadWood">
+				<name>Total Dead wood</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>957 188 1083 270</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Carbon_Store">
+				<name>Carbon Store</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1078 321 1204 403</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="CarbonEmissions">
+				<name>Carbon Emissions</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>749 349 875 431</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Evap">
+				<name>Evapotranspiration</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>935 532 1061 614</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="ForClimate">
+				<name>Global Climate Regulation Services</name>
+				<interior color="ffff99" />
+				<outline color="000000" width="3" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1244 419 1370 501</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
