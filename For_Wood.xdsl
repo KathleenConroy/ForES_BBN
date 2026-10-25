@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network5" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Conifer_Broadleaf">
+			<state id="Broadleaf" />
+			<state id="Conifer" />
+			<state id="Mix" />
+			<probabilities>0.3333333 0.3333333 0.3333333</probabilities>
+		</cpt>
+		<cpt id="Prescription">
+			<state id="Thin_ClearFell" />
+			<state id="Extended_Rotation" />
+			<state id="CCF" />
+			<state id="No_Thin_ClearFell" />
+			<probabilities>0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="Wind_Throw">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Storm_Damage">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Fire">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Abiotic_Losses">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Storm_Damage Wind_Throw Fire</parents>
+			<probabilities>0.7000000000000001 0.2000000000000001 0.1 0.2 0.4 0.4 0.2 0.3 0.5 0.2 0.2 0.6 0.7 0.2 0.1 0.1 0.3 0.6 0.2 0.2 0.6 0.1 0.1 0.8</probabilities>
+		</cpt>
+		<cpt id="Disease">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Pests">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.333333333 0.333333333 0.333333333</probabilities>
+		</cpt>
+		<cpt id="Biotic_Losses">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Disease Pests</parents>
+			<probabilities>0.6 0.3 0.1 0.5 0.4 0.1 0.3 0.3 0.4 0.5 0.3 0.2 0.1 0.5 0.4 0.1 0.4 0.5</probabilities>
+		</cpt>
+		<cpt id="TotalLosses">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Biotic_Losses Abiotic_Losses</parents>
+			<probabilities>0.7000000000000001 0.2000000000000001 0.1 0.2 0.3 0.5 0.1 0.2 0.7 0.3 0.4 0.3 0.2 0.3 0.5 0.1 0.2 0.7 0.1 0.4 0.5 0.1 0.3 0.6 0.1 0.2000000000000001 0.7</probabilities>
+		</cpt>
+		<cpt id="Wind_Row">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Mounding">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Fertilizattion">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Tubing">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Respacing">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Site_Prep2">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Wind_Row Mounding Fertilizattion Tubing Respacing</parents>
+			<probabilities>0.7000000000000001 0.2000000000000001 0.1 0.7000000000000001 0.2000000000000001 0.1 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2000000000000001 0.2 0.5 0.2 0.3 0.6 0.2000000000000001 0.2 0.5 0.3 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.4 0.3 0.3 0.3 0.3 0.4 0.2 0.3 0.5 0.2 0.3 0.5 0.6 0.2 0.2 0.6 0.2 0.2 0.5 0.2 0.3 0.5 0.2 0.3 0.4 0.2 0.4 0.4 0.2 0.4 0.5 0.2 0.3 0.4 0.3 0.3 0.5 0.2000000000000001 0.3 0.5 0.2 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.2 0.2 0.6 0.2 0.2 0.6 0.1 0.2000000000000001 0.7 0.1 0.2000000000000001 0.7</probabilities>
+		</cpt>
+		<cpt id="WGM">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="Losses">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>WGM Site_Prep2 TotalLosses</parents>
+			<probabilities>0.7000000000000001 0.2000000000000001 0.1 0.6 0.3 0.1 0.1 0.3 0.6 0.8 0.1 0.1 0.7000000000000001 0.2000000000000001 0.1 0.2 0.4 0.4 0.8 0.1 0.1 0.7000000000000001 0.2000000000000001 0.1 0.2 0.3 0.5 0.6 0.2 0.2 0.5 0.3 0.2 0.1 0.3 0.6 0.7000000000000001 0.1 0.2 0.6 0.2 0.2 0.2 0.3 0.5 0.7 0.1 0.2 0.6 0.2 0.2 0.2 0.3 0.5 0.6 0.2000000000000001 0.2 0.5 0.3 0.2 0.1 0.3 0.6 0.7000000000000001 0.1 0.2 0.6 0.2000000000000001 0.2 0.2 0.3 0.5 0.7000000000000001 0.1 0.2 0.6 0.2 0.2 0.2 0.3 0.5</probabilities>
+		</cpt>
+		<cpt id="SQ">
+			<state id="Wet" />
+			<state id="Medium" />
+			<state id="Dry" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
+		</cpt>
+		<cpt id="AvYield_Conifers">
+			<state id="Low" />
+			<state id="Mid" />
+			<state id="High" />
+			<intervals>6 12.1 18.1 24</intervals>
+			<parents>Conifer_Broadleaf SQ</parents>
+			<probabilities>0.6 0.3 0.1 0.5 0.4 0.1 0.4 0.4 0.2 0.5 0.3 0.2 0.4 0.3 0.3 0.2 0.4 0.4 0.5 0.3 0.2 0.4 0.3 0.3 0.2 0.4 0.4</probabilities>
+		</cpt>
+		<cpt id="AvYield_Broadleaves">
+			<state id="Low" />
+			<state id="Mid" />
+			<state id="High" />
+			<intervals>4 8 12 14</intervals>
+			<parents>Conifer_Broadleaf SQ</parents>
+			<probabilities>0.6 0.3 0.1 0.5 0.4 0.1 0.4 0.4 0.2 0.5 0.3 0.2 0.4 0.3 0.3 0.2 0.4 0.4 0.5 0.3 0.2 0.4 0.3 0.3 0.2 0.4 0.4</probabilities>
+		</cpt>
+		<cpt id="GMV">
+			<state id="Low" />
+			<state id="Mid" />
+			<state id="High" />
+			<intervals>0 8 14 20</intervals>
+			<parents>AvYield_Conifers AvYield_Broadleaves</parents>
+			<probabilities>0.6 0.3 0.1 0.6 0.3 0.1 0.6 0.3 0.1 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.1 0.3 0.6 0.1 0.3 0.6 0.1 0.3 0.6</probabilities>
+		</cpt>
+		<cpt id="Gross_Area">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<probabilities>0.333333333333333 0.333333333 0.333333333</probabilities>
+		</cpt>
+		<cpt id="Productive_Area">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Gross_Area</parents>
+			<probabilities>0.6 0.3 0.1 0.6 0.2 0.2 0.1 0.3 0.6</probabilities>
+		</cpt>
+		<cpt id="NMV">
+			<state id="Low_7_13cm" />
+			<state id="Mid_14_19cm" />
+			<state id="High_20cm" />
+			<parents>Losses GMV Productive_Area Prescription</parents>
+			<probabilities>0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.4 0.3 0.3 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.5 0.3 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.6 0.2 0.2 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.8 0.1 0.1 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.9 0.05 0.05 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025 0.95 0.025 0.025</probabilities>
+		</cpt>
+		<cpt id="Volume_Quality">
+			<state id="Below_Average" />
+			<state id="Average" />
+			<state id="Above_Average" />
+			<parents>Prescription</parents>
+			<probabilities>0.3 0.4 0.3 0.2 0.3 0.5 0.3 0.3 0.4 0.5 0.3 0.2</probabilities>
+		</cpt>
+		<cpt id="ForestAccess">
+			<state id="Absent" />
+			<state id="Present" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="ForWood">
+			<state id="Low" />
+			<state id="Medium" />
+			<state id="High" />
+			<parents>Volume_Quality NMV ForestAccess</parents>
+			<probabilities>0.8 0.1 0.1 0.7 0.2 0.1 0.7 0.2 0.1 0.6 0.3 0.1 0.6 0.3 0.1 0.5 0.3 0.2 0.8 0.1 0.1 0.6 0.2 0.2 0.8 0.1 0.1 0.5 0.3 0.2 0.8 0.1 0.1 0.5 0.3 0.2 0.8 0.1 0.1 0.2 0.3 0.5 0.8 0.1 0.1 0.2 0.3 0.5 0.8 0.1 0.1 0.1 0.4 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.1.4109.0 ACADEMIC" name="For Wood">
+			<node id="Conifer_Broadleaf">
+				<name>Species-General</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>32 798 158 880</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Prescription">
+				<name>Forest Prescription</name>
+				<interior color="cc99ff" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>936 97 1062 179</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="Wind_Throw">
+				<name>Wind Throw</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>218 595 344 677</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Storm_Damage">
+				<name>Storm Damage </name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>32 547 158 629</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Fire">
+				<name>Fire</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>34 470 160 552</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Abiotic_Losses">
+				<name>Abiotic Losses</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>227 510 353 592</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Disease">
+				<name>Disease</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>34 300 160 382</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Biotic_Losses">
+				<name>Biotic Losses</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>238 415 364 497</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Pests">
+				<name>Pest density</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>31 383 157 465</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="TotalLosses">
+				<name>Total Losses (Abiotic&amp;Biotic Losses)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>661 478 787 560</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Site_Prep2">
+				<name>Site Prep</name>
+				<interior color="e5f6f7" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>261 121 387 203</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Wind_Row">
+				<name>Wind Rowing</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>185 282 311 364</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Mounding">
+				<name>Mounding</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>33 224 159 306</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Fertilizattion">
+				<name>Fertilizattion</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>33 149 159 231</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Tubing">
+				<name>Tubing</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>33 72 159 154</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Respacing">
+				<name>Respacing</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>238 13 364 95</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="Losses">
+				<name>Stock losses</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>887 483 1013 565</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="AvYield_Conifers">
+				<name>Average Yield class (Conifers)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>420 605 546 687</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="AvYield_Broadleaves">
+				<name>Average Yield class (Broadleaves)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>417 729 543 811</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="SQ">
+				<name>Soil Moisture</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 706 156 788</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="GMV">
+				<name>Gross Merchantable Volume</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>862 624 988 706</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="NMV">
+				<name>Net Merchantable Volume</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1075 418 1201 500</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Productive_Area">
+				<name>Productive Area</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>463 124 589 206</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Gross_Area">
+				<name>Gross Area</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>456 11 582 93</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="Volume_Quality">
+				<name>Volume Quality (Larger diameter = better)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>996 259 1122 341</position>
+				<barchart active="true" width="152" height="72" />
+			</node>
+			<node id="ForWood">
+				<name>Wood Provisioning</name>
+				<interior color="ffff99" />
+				<outline color="000000" width="3" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1313 439 1439 521</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="ForestAccess">
+				<name>Forest Access (500 m)</name>
+				<interior color="ccffcc" />
+				<outline color="000000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1281 109 1407 191</position>
+				<barchart active="true" width="126" height="68" />
+			</node>
+			<node id="WGM">
+				<name>Wild Game management</name>
+				<interior color="cc99ff" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>670 108 796 190</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
